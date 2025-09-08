@@ -1,6 +1,6 @@
 # 網站基本設定
-title: Xilverism GitHub 商店
-subtitle: Xilverism Site
+title: Xilverism 商店
+subtitle: Xilverism Shop
 description: 這裡提供高品質、獨特的商品，讓你的生活更美好。
 keywords:
 author: silverkuo
@@ -11,7 +11,7 @@ url: https://xilverism.github.io/
 root: /root/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
-theme: next
+# theme: next
 
 # 網站 URL 設定 (選擇性)
 # 如果你有自訂網域，可以將下面的 url 和 baseurl 註解掉
@@ -20,11 +20,11 @@ theme: next
 
 # Jekyll 相關設定
 # GitHub Pages 支援的 Jekyll 插件
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-minifier
+#plugins:
+#  - jekyll-feed
+#  - jekyll-sitemap
+#  - jekyll-seo-tag
+#  - jekyll-minifier
 
 # 排除不需要發布到網站的檔案或資料夾
 exclude:
@@ -34,4 +34,5 @@ exclude:
   - Gemfile.lock
   - node_modules
   - package.json
+
 
