@@ -1,1 +1,277 @@
-xilverism.github.io
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 GitHub 商店 - 首頁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* 導覽列 */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #ffcc00; /* 懸停顏色 */
+        }
+
+        /* 主視覺宣傳區塊 */
+        .hero {
+            background: url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Amazing+Products+Here') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* 半透明遮罩 */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            background-color: #ffcc00; /* 按鈕顏色 */
+            color: #333;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* 商品區塊 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #ffcc00;
+            border-radius: 2px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-card-content {
+            padding: 1.5rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+
+        .product-card p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e44d26; /* 價格顏色 */
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card .buy-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .product-card .buy-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 頁腳 */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">我的 GitHub 商店</a>
+        <div class="nav-links">
+            <a href="#">首頁</a>
+            <a href="#">所有商品</a>
+            <a href="#">關於我們</a>
+            <a href="#">聯絡我們</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>發現獨特商品</h1>
+            <p>高品質、設計感十足，為您帶來全新體驗</p>
+            <a href="#" class="btn">立即選購</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">熱門商品</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/FF5733/ffffff?text=商品一" alt="商品一">
+                <div class="product-card-content">
+                    <h3>設計師馬克杯</h3>
+                    <p>限量發行，獨家設計，讓你的日常更具風格。</p>
+                    <div class="price">NT$ 499</div>
+                    <a href="#" class="buy-btn">查看詳情</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/33A0FF/ffffff?text=商品二" alt="商品二">
+                <div class="product-card-content">
+                    <h3>智能手環 Pro</h3>
+                    <p>追蹤健康數據，運動監測，智能生活盡在掌握。</p>
+                    <div class="price">NT$ 1299</div>
+                    <a href="#" class="buy-btn">查看詳情</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/33FF57/ffffff?text=商品三" alt="商品三">
+                <div class="product-card-content">
+                    <h3>復古藍芽音箱</h3>
+                    <p>經典造型，現代音質，打造專屬您的音樂空間。</p>
+                    <div class="price">NT$ 999</div>
+                    <a href="#" class="buy-btn">查看詳情</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/8A2BE2/ffffff?text=商品四" alt="商品四">
+                <div class="product-card-content">
+                    <h3>高品質帆布包</h3>
+                    <p>堅固耐用，時尚百搭，通勤旅行最佳夥伴。</p>
+                    <div class="price">NT$ 699</div>
+                    <a href="#" class="buy-btn">查看詳情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 我的 GitHub 商店. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
