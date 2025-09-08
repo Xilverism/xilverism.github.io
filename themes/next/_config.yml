@@ -1,0 +1,21 @@
+scheme: Gemini
+
+menu:
+  home: / || home
+  #about: /about/ || user
+  #tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+
+avatar:
+  # In theme directory (source/images): /images/avatar.gif
+  # In site directory (source/uploads): /uploads/avatar.gif
+  # You can also use other linking images.
+  url: /images/圖片.jpg
+  # If true, the avatar would be dispalyed in circle.
+  rounded: true
+  # If true, the avatar would be rotated with the cursor.
+  rotated: false
