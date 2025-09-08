@@ -1,3 +1,15 @@
-theme: jekyll-theme-minimal
-title: Silverism
-description: Bookmark this to keep an eye on my project updates!
+title: Xilverism
+subtitle: Xilverism Site
+description: #網站/部落格基本描述 
+keywords:
+author: silverkuo
+language: zh-TW
+timezone: Asia/Taipei
+
+url: https://xilverism.github.io/
+root: /root/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+theme: next
+
+branch: \theme\next\_config.xml
